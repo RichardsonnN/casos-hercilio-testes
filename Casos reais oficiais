@@ -1,0 +1,149 @@
+#Identificar área de login 
+#Será indetificada a área de login
+def CT_0031():
+  
+  #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  #menu deve ser aberto mostrando as opções
+  # 
+#~~~~ 
+#ser redirecionado apos clicar em link do menu 
+#Será redirecionado para a opção de guia de profissões 
+def CT_0032():
+  
+  
+  #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  
+  #PASSO 2 Clicar no botão de guia de profissões 
+  elem = driver.find_element_by_name('//*[@id="menu_suspenso_profissoes"]')
+  elem.click()
+ 
+#~~~~~~~
+  
+#Identificar área de login 
+#Será indetificada a área de login
+def CT_0012():
+  
+  
+  #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  
+  #PASSO 2 Clicar no botão de login
+  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]')
+  elem.click()
+  
+  #Área de login deve ser exibida 
+  
+#~~~~~~~~~~~~~~
+#Login com a senha errada
+#o login não deverá ser efetuado por causa da senha incorreta do erro
+def CT_0038():
+ 
+  
+  #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  
+  #PASSO 2 Clicar no botão de login
+  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]')
+  elem.click()
+  
+  #PASSO 3 inserir user.
+  elem = driver.find_element_by_name('//*[@id="input-2343410"]')
+  elem.send_keys('clebarcaio12345@gmail.com')
+
+  
+  #PASSO 4 inserir errada.
+  elem = driver.find_element_by_name('//*[@id="input-2343411"]')
+  elem.send_keys('cleber194t%')
+  
+  #PASSO 5 clicar no botão.
+  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/div/form/button')
+  elem.click()
+  #Acesso deve ser negado por causa da senha
+#~~~~~~~~~
+#criar conta com email já utlizado
+#a conta não pode ser criada com um utilizado
+def CT_0039():
+  
+    #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  
+  #PASSO 2 Clicar no botão de login
+  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]')
+  elem.click()
+  
+  #PASSO 3 Clicar para fazer cadastro
+  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/footer/a')
+  elem.click()
+  
+  #PASSO 4 Colocar nome para cadastro
+  elem = driver.find_element_by_name('//*[@id="input-0"]')
+  elem.send_keys('Carlos Do Flamengo e Vasco')
+  
+  #PASSO 5 Colocar Email já utilizado 
+  elem = driver.find_element_by_name('//*[@id="input-1"]')
+  elem.send_keys('nevessrichardsonn@gmail.com')
+  
+  #PASSO 6 Colocar o número de telefone
+  elem = driver.find_element_by_name('//*[@id="input-2"]')
+  elem.send_keys('98973667163')
+  
+  #PASSO 7 Aceitar termos
+  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/div/div/section/div[2]/div/div/div/form/div[4]/div/input')
+  elem.click() 
+  
+  #PASSO 8 Submeter
+  elem = driver.find_element_by_mame('//*[@id="submit-step"]')
+  elem.click()  
+  #cadastro não é aceito por conter email já utilizado 
+  
+#Colocar padrão de senha errado
+#Não deve ser criado a conta pois a senha não segue o padrão
+def CT_0040():
+  #PASSO 1 clicar no menu
+  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg')
+  elem.click()
+  
+  #PASSO 2 Clicar no botão de login
+  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]')
+  elem.click()
+  
+  #PASSO 3 Clicar para fazer cadastro
+  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/footer/a')
+  elem.click()
+  
+  #PASSO 4 Colocar nome para cadastro
+  elem = driver.find_element_by_name('//*[@id="input-0"]')
+  elem.send_keys('Carlos do aranha do maranhão')
+  
+  #PASSO 5 Colocar Email para cadastro
+  elem = driver.find_element_by_name('//*[@id="input-1"]')
+  elem.send_keys('carlosmaranhaodoarrocha1234@gmail.com')
+  
+  #PASSO 6 Colocar o número de telefone
+  elem = driver.find_element_by_name('//*[@id="input-2"]')
+  elem.send_keys('98991126520')
+  
+  #PASSO 7 Aceitar termos
+  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/div/div/section/div[2]/div/div/div/form/div[4]/div/input')
+  elem.click() 
+  
+  #PASSO 8 Submeter
+  elem = driver.find_element_by_mame('//*[@id="submit-step"]')
+  elem.click()  
+  
+  #PASSO 9 Criar senha
+  elem = driver.find_element_by_name('//*[@id="input-3"]')
+  elem.send_keys('carlos1234')
+  
+  #PASSO 10 Submeter senha
+  elem = driver.find_element_by_name('//*[@id="submit-step"]')
+  elem.click()
+  
+#conta não deve ser criada pois contém erro na senha 
